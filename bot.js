@@ -1,12 +1,14 @@
-import { rollDice } from './command/dice';
-
+require('dotenv').config()
 
 const tmi = require('tmi.js');
+const rollDice = require('./command/dice');
+
+console.log(process.env.BOT_USERNAME)
 
 // Define configuration options
 const options = {
   identity: {
-    username: 'TheUnleashedGoblin',
+    username: process.env.BOT_USERNAME ,
     password: '<OAUTH_TOKEN>'
   },
   channels: [

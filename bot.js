@@ -8,11 +8,11 @@ console.log(process.env.BOT_USERNAME)
 // Define configuration options
 const options = {
   identity: {
-    username: process.env.BOT_USERNAME ,
-    password: '<OAUTH_TOKEN>'
+    username: process.env.BOT_USERNAME,
+    password: process.env.OAUTH_TOKEN
   },
   channels: [
-    '<CHANNEL_NAME>'
+    process.env.CHANNEL_NAME
   ]
 };
 const client = new tmi.client(options);
